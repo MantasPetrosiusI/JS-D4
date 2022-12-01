@@ -149,15 +149,34 @@ function average(ex7Array){
 */
 
 let longArray = ["Seven", "Reach", "One", "Supermarket", "Everyday"];
+console.log("Longest word in array was ", longest(longArray))
 
-function longest
+function longest(longArray){
+    let longest = longArray[0].length;
+    let longestString = longArray[0];
+    for(let i = 1; i<longArray.length-1; i++){
+        if(longArray[i].length> longest){
+            longest = longArray[i].length;
+            longestString = longArray[i];
+        }
+    }
+    return longestString;
+}
 
 /* EXTRA 9
  Write a function to create a very simple anti spam filter for your mailbox. The function takes a string emailContent, and returns a boolean.
  The function should return true if the emailContent string does not contain the words SPAM or SCAM.
 */
-
-/* WRITE YOUR ANSWER HERE */
+let emailContent ="IT IS DEFINETELY NOT A SCAM!";
+console.log(spamFilter(emailContent))
+function spamFilter(emailContent){
+    
+    if(emailContent.includes("SCAM") || emailContent.includes("SPAM")){
+        return false;
+    }else{
+        return true;
+    }
+}
 
 /* EXTRA 10
  Write a function that receives a date as a parameter and calculates the number of days passed since the given date.
