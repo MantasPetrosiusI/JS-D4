@@ -199,8 +199,20 @@ function daysPassed(date){
  ["00","01","02"
  "10","11","12"]
 */
-
-/* WRITE YOUR ANSWER HERE */
+x = 3;
+let y = 3;
+let coolMatrix = matrixGenerator(x, y);
+console.log(coolMatrix);
+function matrixGenerator(x, y){
+    let coolMatrix = [];
+    for(let i = 0; i < x ; i++){
+        for(let j = 0; j < y; j++){
+            rand = Math.floor(Math.random()*15);
+            coolMatrix[j].push = rand;
+    }
+}
+    return coolMatrix;
+}
 
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
