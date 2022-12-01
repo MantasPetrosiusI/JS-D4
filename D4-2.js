@@ -206,10 +206,12 @@ console.log(coolMatrix);
 function matrixGenerator(x, y){
     let coolMatrix = [];
     for(let i = 0; i < x ; i++){
+        let row = [];
         for(let j = 0; j < y; j++){
             rand = Math.floor(Math.random()*15);
-            coolMatrix[j].push = rand;
+            row.push(rand);
     }
+    coolMatrix.push(row);
 }
     return coolMatrix;
 }
