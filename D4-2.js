@@ -107,10 +107,10 @@ function maxShoppingCart(shoppingCart){
  Create a function called "latestShoppingCart" which receives the shoppingCart array and returns the last item.
 */
 
-let lastItem = latestShoppingCart(shoppingCart)
+let lastItem = latestShoppingCart(shoppingCart);
 console.log("\nLast item in shopping cart is: " ,lastItem);
 function latestShoppingCart(shoppingCart){
-    return shoppingCart[shoppingCart.length];
+    return shoppingCart[shoppingCart.length-1];
 }
 
 /* EXTRA 6
@@ -118,7 +118,18 @@ function latestShoppingCart(shoppingCart){
  The function loops and prints a random number between 0 and 9 until the random number is bigger than x for three times in a row.
 */
 
-/* WRITE YOUR ANSWER HERE */
+let x = 5;
+loopUntil(x);
+function loopUntil(x){
+    let count = 0;
+    while(count < 3){
+        let rand = Math.floor(Math.random()*10);
+        if(rand > x){
+            count++;
+        }
+        console.log(rand);
+    }
+}
 
 /* EXTRA 7
  Write a function called "average" which receives an array and returns the average numerical value. The function automatically skips non-numeric entries in the array.
