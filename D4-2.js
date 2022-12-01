@@ -134,14 +134,23 @@ function loopUntil(x){
 /* EXTRA 7
  Write a function called "average" which receives an array and returns the average numerical value. The function automatically skips non-numeric entries in the array.
 */
-
-/* WRITE YOUR ANSWER HERE */
+let ex7Array = [1, 2, 3, 4, 5];
+console.log("Average of ",ex7Array, " = "+average(ex7Array));
+function average(ex7Array){
+    let sum =0;
+    for (let i = 0; i < ex7Array.length; i++) {
+         sum += ex7Array[i];    
+    }
+    return sum/ex7Array.length;
+}
 
 /* EXTRA 8
  Write a function called "longest" to find the longest string from a given array of strings.
 */
 
-/* WRITE YOUR ANSWER HERE */
+let longArray = ["Seven", "Reach", "One", "Supermarket", "Everyday"];
+
+function longest
 
 /* EXTRA 9
  Write a function to create a very simple anti spam filter for your mailbox. The function takes a string emailContent, and returns a boolean.
