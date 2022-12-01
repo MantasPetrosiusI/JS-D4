@@ -171,7 +171,7 @@ let emailContent ="IT IS DEFINETELY NOT A SCAM!";
 console.log(spamFilter(emailContent))
 function spamFilter(emailContent){
     
-    if(emailContent.includes("SCAM") || emailContent.includes("SPAM")){
+    if(emailContent.toUpperCase().includes("SCAM") || emailContent.toUpperCase().includes("SPAM")){
         return false;
     }else{
         return true;
@@ -182,7 +182,15 @@ function spamFilter(emailContent){
  Write a function that receives a date as a parameter and calculates the number of days passed since the given date.
 */
 
-/* WRITE YOUR ANSWER HERE */
+let date = new Date("11/21/2022");
+console.log("Number of days that passed since "+date+"\n"+daysPassed(date));
+
+function daysPassed(date){
+    let date2 = new Date();
+    let dateTime = date2.getTime() - date.getTime();
+    let passedDays = dateTime /(1000*3600*24);
+    return Math.floor(passedDays);
+}
 
 /* EXTRA 11
  Write a function called "matrixGenerator" which receives two integers, x and y, as parameters.
