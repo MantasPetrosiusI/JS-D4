@@ -52,7 +52,7 @@ let shoppingCart = [
     }
 ]
     total = shoppingCartTotal(shoppingCart);
-    console.log("Items inside the cart: ",shoppingCart,"\nTotal price: "+total)
+    console.log("\nItems inside the cart: ",shoppingCart,"\nTotal price: "+total)
 function shoppingCartTotal(shoppingCart){
     sum = 0;
     for(let i = 0; i<shoppingCart.length; i++){
@@ -69,14 +69,14 @@ function shoppingCartTotal(shoppingCart){
 for(let i = 0; i<shoppingCart.length; i++){
     shoppingCart[i].quantity = Math.floor(Math.random()*9)
 }
-console.log(shoppingCart)
+console.log("\n",shoppingCart)
 let price=12;
 let name = "Cake";
 let id = 5521;
 let quantity = Math.floor(Math.random()*9);
 
 let updatedCart= addToShoppingCart(shoppingCart, price, name, id, quantity);
-console.log(updatedCart)
+console.log("\n",updatedCart)
 function addToShoppingCart(shoppingCart, price, name, id, quantity){
     shoppingCart.push({price, name, id, quantity});
     return shoppingCart;
@@ -86,14 +86,17 @@ function addToShoppingCart(shoppingCart, price, name, id, quantity){
  Create a function called "maxShoppingCart" which receives the shoppingCart array and returns the most expensive item in it.
 */
 
-console.log("The most expensive item on shopping cart is: ", maxShoppingCart(shoppingCart));
+console.log("\nThe most expensive item on shopping cart is: ", maxShoppingCart(shoppingCart));
+
 function maxShoppingCart(shoppingCart){
-    max = shoppingCart.price;
-    maxItem= {};
-    for(let i = 1; i<shoppingCart.length; i++){
+
+    max = 0;
+    maxItem= shoppingCart[0];
+
+    for(let i = 0; i<shoppingCart.length; i++){
         if(shoppingCart[i].price > max){
             max = shoppingCart[i].price;
-            maxItem = shoppingCart[i];
+            maxItem= shoppingCart[i];
         }
     }
     return maxItem;
@@ -104,7 +107,11 @@ function maxShoppingCart(shoppingCart){
  Create a function called "latestShoppingCart" which receives the shoppingCart array and returns the last item.
 */
 
-/* WRITE YOUR ANSWER HERE */
+let lastItem = latestShoppingCart(shoppingCart)
+console.log("\nLast item in shopping cart is: " ,lastItem);
+function latestShoppingCart(shoppingCart){
+    return shoppingCart[shoppingCart.length];
+}
 
 /* EXTRA 6
  Create a function called "loopUntil" which receives an integer x between 0 and 9 as a parameter.
